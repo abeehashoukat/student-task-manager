@@ -12,9 +12,17 @@ class TaskManager:
     def list_tasks(self):
         return list(self.tasks)
 
+    def _find(self, task_id):
+     for t in self.tasks:
+        if t["id"] == task_id:
+            return t
+     raise KeyError(f"No task with id {task_id}")
+    
     # --- complete (implemented in feature/complete-task) ---
     def complete_task(self, task_id):
-        raise NotImplementedError
+     task = self._find(task_id)
+     task["completed"] = True
+     return task
 
     # --- delete (implemented in feature/delete-task) ---
     def delete_task(self, task_id):
