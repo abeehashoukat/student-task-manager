@@ -9,7 +9,7 @@ class TestTaskManager(unittest.TestCase):
     def test_add_task(self):
         t = self.m.add_task("Study Git")
         self.assertEqual(t["title"], "Study Git")
-        self.assertEqual(len(self.m.list_tasks()), ... , 2)
+        self.assertEqual(len(self.m.list_tasks()), 1)
 
     def test_add_empty_title_rejected(self):
         with self.assertRaises(ValueError):
