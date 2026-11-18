@@ -27,7 +27,7 @@ def main():
             else:
                 print("Invalid choice.")
         except (ValueError, KeyError) as e:
-            print("Error:", e)
+            print("Oops:", e)
         except NotImplementedError:
             print("Not implemented yet.")
 
