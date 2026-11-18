@@ -11,7 +11,7 @@ def show(manager):
 def main():
     manager = TaskManager()
     while True:
-        print("\n1. Add  2. Show  3. Complete  4. Delete  5. Exit")
+        print("\n1. Add  2. Show  3. Mark complete  4. Delete  5. Exit")
         choice = input("Choose: ").strip()
         try:
             if choice == "1":
