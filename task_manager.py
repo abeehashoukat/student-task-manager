@@ -18,4 +18,7 @@ class TaskManager:
 
     # --- delete (implemented in feature/delete-task) ---
     def delete_task(self, task_id):
-        raise NotImplementedError
+     for i, t in enumerate(self.tasks):
+        if t["id"] == task_id:
+            return self.tasks.pop(i)
+     raise KeyError(f"No task with id {task_id}")
